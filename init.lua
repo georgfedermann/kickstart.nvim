@@ -191,7 +191,10 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<leader>pv', vim.cmd.Explore, { desc = 'open Vim file explorer' })
+vim.keymap.set('n', '<leader>pv', vim.cmd.Explore, { desc = 'Open Vim file explorer' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center cursor line' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center cursor line' })
+vim.keymap.set('x', '<leader>b', '"_dP', { desc = 'Delete selection to black hole register and paste' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
