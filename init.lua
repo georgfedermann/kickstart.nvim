@@ -323,6 +323,13 @@ require('lazy').setup({
     end,
   },
 
+  {
+    'tpope/vim-fugitive',
+    config = function()
+      vim.keymap.set('n', '<leader>b', ':Git blame<CR>', { desc = 'blame' })
+    end,
+  },
+
   -- NOTE: Plugins can specify dependencies.
   --
   -- The dependencies are proper plugin specifications as well - anything
