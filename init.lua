@@ -324,6 +324,10 @@ require('lazy').setup({
   },
 
   {
+    'github/copilot.vim',
+  },
+
+  {
     'tpope/vim-fugitive',
     config = function()
       vim.keymap.set('n', '<leader>b', ':Git blame<CR>', { desc = 'blame' })
