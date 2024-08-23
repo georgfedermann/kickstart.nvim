@@ -663,7 +663,7 @@ require('lazy').setup({
     end,
   },
 
-  { -- Autoformat
+  { -- Code Formatting, Autoformat
     'stevearc/conform.nvim',
     lazy = false,
     keys = {
@@ -689,7 +689,12 @@ require('lazy').setup({
         }
       end,
       formatters_by_ft = {
+        bash = { 'shfmt' },
+        clojure = { 'cljfmt' },
+        javascript = { 'prettierd' },
+        json = { 'prettierd' },
         lua = { 'stylua' },
+        python = { 'black' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -869,6 +874,7 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
